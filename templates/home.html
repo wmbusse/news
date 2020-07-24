@@ -2,10 +2,17 @@
 {% block title %} HOME {% endblock title %}
 
 {% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Newspaper App</h1>
+    <p class="lead">
+        A  Newspaper website built with django
+    </p>
+    <p class="lead">
+        <a href="{% url 'article_list' %}" class="btn btn-primary btn-lg">View All Articles</a>
+    </p>
+</div>
 {% if user.is_authenticated %}
 <h1> Welcome: {{user.username}}</h1>
-
-<p><a href="{%url 'logout' %}">Log out </a></p>
 {% else %}
 <p>You are not logged in</p>
 <small class="text-muted">Already have an account? </small>
