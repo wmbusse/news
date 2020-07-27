@@ -18,6 +18,7 @@
 <small class="text-muted">Already have an account? </small>
 <a href="{% url 'login' %}"> Log in </a>
 <p><small class="text-muted">Need an account? <a href="{% url 'signup'%}"> Register Here</a></small></p>
+<p><small>Forgot password <a href="{%url 'password_reset' %}">Reset Password</a></small></p>
 {% endif %}
 {% endblock content %}
 
